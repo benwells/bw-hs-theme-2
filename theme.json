@@ -1,12 +1,11 @@
 {
-  "label": "CMS theme boilerplate",
+  "label": "HS Theme",
   "author": {
-    "name": "HubSpot",
-    "email": "hs-content-assets@hubspot.com",
-    "url": "https://www.hubspot.com/"
-	},
-  "documentation_url": "https://developers.hubspot.com/docs/cms/building-blocks/themes/hubspot-cms-boilerplate",
-  "example_url": "https://boilerplate.hubspotcms.com",
+    "name": "Ben Wells",
+    "email": "mrbrwells@gmail.com",
+    "url": "https://github.com/benwells"
+  },
+  "documentation_url": "https://github.com/benwells/bw-hs-theme-1",
   "preview_path": "./templates/home.html",
   "screenshot_path": "./images/template-previews/home.png",
   "enable_domain_stylesheets": false,
@@ -17,6 +16,20 @@
       "mediaQuery": "@media (max-width: 767px)",
       "previewWidth": {
         "value": 477
+      }
+    },
+    {
+      "name": "tablet",
+      "mediaQuery": "@media (min-width: 768px) and (max-width: 1024px)",
+      "previewWidth": {
+        "value": 768
+      }
+    },
+    {
+      "name": "desktop",
+      "mediaQuery": "@media (min-width: 1025px)",
+      "previewWidth": {
+        "value": 1200
       }
     }
   ]

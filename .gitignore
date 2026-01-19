@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+bun.lockb
+package-lock.json
+yarn.lock
+
+# Build outputs - IMPORTANT: js/dist/ should be COMMITTED for HubSpot
+# Only ignore the .vite cache
+.vite/
+*.local
+
+# HubSpot CLI - Keep config private
+.hubspot/
+hubspot.config.yml
+
+# Editor
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Logs
+*.log
+npm-debug.log*
+lerna-debug.log*
+
+# Environment
+.env
+.env.local
+.env.production.local
+.env.development.local
+.env.test.local
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.tgz
+.cache
+docs
