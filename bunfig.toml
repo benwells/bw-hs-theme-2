@@ -1,0 +1,13 @@
+[install]
+# Configure bun package manager
+registry = "https://registry.npmjs.org/"
+auto = "auto"
+exact = false
+
+[install.cache]
+# Cache packages for faster installs
+dir = "~/.bun/install/cache"
+
+[run]
+# Enable bun shell for scripts
+shell = "bun"
