@@ -1,0 +1,11 @@
+{
+  "label": "Hero Banner",
+  "icon": "{% module_asset 'icon' './icon.svg' %}",
+  "categories": [
+    "section"
+  ],
+  "host_template_types": [
+    "PAGE"
+  ],
+  "is_available_for_new_content": true
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "heading",
+    "name": "heading",
+    "label": "Heading",
+    "required": true,
+    "locked": false,
+    "type": "text",
+    "default": "Welcome to Our Site"
+  },
+  {
+    "id": "subheading",
+    "name": "subheading",
+    "label": "Subheading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Build something amazing"
+  },
+  {
+    "id": "cta_primary_text",
+    "name": "cta_primary_text",
+    "label": "Primary CTA Text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Get Started"
+  },
+  {
+    "id": "cta_primary_url",
+    "name": "cta_primary_url",
+    "label": "Primary CTA URL",
+    "required": false,
+    "locked": false,
+    "type": "url",
+    "default": {
+      "href": "#"
+    }
+  },
+  {
+    "id": "cta_secondary_text",
+    "name": "cta_secondary_text",
+    "label": "Secondary CTA Text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Learn More"
+  },
+  {
+    "id": "cta_secondary_url",
+    "name": "cta_secondary_url",
+    "label": "Secondary CTA URL",
+    "required": false,
+    "locked": false,
+    "type": "url",
+    "default": {
+      "href": "#"
+    }
+  },
+  {
+    "id": "background_image",
+    "name": "background_image",
+    "label": "Background Image",
+    "required": false,
+    "locked": false,
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Hero background"
+    }
+  },
+  {
+    "id": "background_overlay",
+    "name": "background_overlay",
+    "label": "Background Overlay (RGBA)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "rgba(0, 0, 0, 0.4)"
+  },
+  {
+    "id": "alignment",
+    "name": "alignment",
+    "label": "Content Alignment",
+    "required": false,
+    "locked": false,
+    "type": "choice",
+    "choices": [
+      [
+        "left",
+        "Left"
+      ],
+      [
+        "center",
+        "Center"
+      ],
+      [
+        "right",
+        "Right"
+      ]
+    ],
+    "default": "center"
+  }
+]

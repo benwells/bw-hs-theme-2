@@ -1,0 +1,43 @@
+[
+  {
+    "id": "logo",
+    "name": "logo",
+    "label": "Logo",
+    "required": false,
+    "locked": false,
+    "type": "image",
+    "default": {
+      "src": "",
+      "alt": "Logo"
+    }
+  },
+  {
+    "id": "navigation",
+    "name": "navigation",
+    "label": "Navigation Items",
+    "required": false,
+    "locked": false,
+    "type": "menu",
+    "default": []
+  },
+  {
+    "id": "cta_text",
+    "name": "cta_text",
+    "label": "CTA Button Text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Get Started"
+  },
+  {
+    "id": "cta_url",
+    "name": "cta_url",
+    "label": "CTA Button URL",
+    "required": false,
+    "locked": false,
+    "type": "url",
+    "default": {
+      "href": "#"
+    }
+  }
+]

@@ -1,0 +1,12 @@
+{% require_js %}
+<script type="module">
+  // ESM import for the web component
+  import '{{ get_asset_url('../js/dist / hero - banner.js') }}';
+</script>
+{% end_require_js %}
+
+<hero-banner heading="{{ module.heading }}" subheading="{{ module.subheading }}"
+  cta-primary-text="{{ module.cta_primary_text }}" cta-primary-url="{{ module.cta_primary_url.href }}"
+  cta-secondary-text="{{ module.cta_secondary_text }}" cta-secondary-url="{{ module.cta_secondary_url.href }}"
+  background-image="{{ module.background_image.src }}" background-overlay="{{ module.background_overlay }}"
+  alignment="{{ module.alignment }}"></hero-banner>

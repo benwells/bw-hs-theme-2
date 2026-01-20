@@ -1,0 +1,11 @@
+{
+  "label": "Header Navigation",
+  "icon": "{% module_asset 'icon' './icon.svg' %}",
+  "categories": [
+    "header"
+  ],
+  "host_template_types": [
+    "PAGE"
+  ],
+  "is_available_for_new_content": true
+}

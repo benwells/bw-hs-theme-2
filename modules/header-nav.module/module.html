@@ -1,0 +1,9 @@
+{% require_js %}
+<script type="module">
+  // ESM import for the web component
+  import '{{ get_asset_url('../js/dist / header - nav.js') }}';
+</script>
+{% end_require_js %}
+
+<header-nav logo="{{ module.logo.src }}" navigation='{{ module.navigation|tojson }}' cta-text="{{ module.cta_text }}"
+  cta-url="{{ module.cta_url.href }}"></header-nav>

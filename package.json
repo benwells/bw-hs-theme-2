@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "watch": "vite build --watch",
-    "deploy": "bun run build && hs upload . my-first-theme"
+    "deploy": "bun run build && hs upload . bw-hs-theme-2"
   },
   "devDependencies": {
     "@hubspot/cli": "^6.0.0",
