@@ -2,7 +2,7 @@
   "label": "Hero Banner",
   "icon": "{% module_asset 'icon' './icon.svg' %}",
   "categories": [
-    "section"
+    "BODY_CONTENT"
   ],
   "host_template_types": [
     "PAGE"

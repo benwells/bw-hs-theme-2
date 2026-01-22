@@ -2,7 +2,7 @@
   "label": "Header Navigation",
   "icon": "{% module_asset 'icon' './icon.svg' %}",
   "categories": [
-    "header"
+    "DESIGN"
   ],
   "host_template_types": [
     "PAGE"

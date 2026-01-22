@@ -16,6 +16,9 @@ export default defineConfig({
     // Output to js/dist for HubSpot
     outDir: 'js/dist',
     emptyOutDir: true,
+    target: 'es2020',
+    minify: 'terser',
+    sourcemap: true,
     lib: {
       entry: {
         'header-nav': resolve(__dirname, 'src/components/HeaderNav.svelte'),
@@ -32,11 +35,5 @@ export default defineConfig({
         assetFileNames: 'assets/[name].[ext]'
       }
     }
-  },
-  // Optimize for modern browsers (HubSpot supports ESM)
-  build: {
-    target: 'es2020',
-    minify: 'terser',
-    sourcemap: true
   }
 });

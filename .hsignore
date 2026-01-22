@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+bun.lockb
+package-lock.json
+yarn.lock
+
+# Build outputs
+.vite/
+*.local
+
+# HubSpot CLI
+.hubspot/
+hubspot.config.yml
+
+# Editor
+.vscode
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Logs
+*.log
+npm-debug.log*
+lerna-debug.log*
+
+# Environment
+.env
+.env.*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.tgz
+.cache
+
+# Documentation (don't upload to HubSpot)
+docs/
+*.md
+!README.md
+
+# Config files
+.git
+.gitignore
+.hsignore
+bunfig.toml
+jsconfig.json
+svelte.config.js
+vite.config.js
+package.json
+package-lock.json
+setup.sh
+hubspot.config.yml.example
+
+# Source files (built files in js/dist are uploaded)
+src/
