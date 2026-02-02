@@ -154,7 +154,21 @@ body {
 /* Content Sections */
 .content-section-a,
 .content-section-b {
-  padding: 28px 0;
+  padding: 28px 0 !important;
+}
+
+.hero {
+  padding: 28px 0 !important;
+}
+
+/* Override HubSpot DND section spacing */
+.dnd-section,
+.dnd-row,
+.dnd-column {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .content-section-a .container .row,

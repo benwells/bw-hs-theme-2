@@ -24,7 +24,7 @@ offset=0
 {% dnd_row %}
 {% dnd_module path="@hubspot/rich_text" %}
 {% module_attribute "html" %}
-<section id="about" class="hero" style="padding: 28px 0;">
+<section id="about" class="hero">
   <div class="container hero-inner">
     <div class="hero-photo">
       <img src="{{ get_asset_url('../images/marc-photo.jpg') }}" alt="Marc Navon" />
@@ -61,7 +61,7 @@ offset=0
 {% dnd_row %}
 {% dnd_module path="@hubspot/rich_text" %}
 {% module_attribute "html" %}
-<div class="content-section-b" style="padding: 28px 0;">
+<div class="content-section-b">
   <div class="container">
     <div class="row" id="cbt">
       <div class="col-lg-5 col-sm-6">
@@ -108,7 +108,7 @@ offset=0
 {% dnd_row %}
 {% dnd_module path="@hubspot/rich_text" %}
 {% module_attribute "html" %}
-<div class="content-section-a" style="padding: 28px 0;">
+<div class="content-section-a">
   <div class="container">
     <div class="row" id="biography">
       <div class="col-lg-5 col-sm-6">
@@ -127,7 +127,9 @@ offset=0
           Massachusetts Department of Mental Health; Operations Manager of the Behavioral Health Program at Neighborhood
           Health Plan in Boston; and Managing Director of the Center for Health Policy and Research at the UMass Medical
           School in Worcester, MA. Marc has been in private practice since 1986 serving clients of all ages for a
-          variety of behavioral health issues.</p>
+          variety of behavioral health issues.
+          <img class="img-responsive" src="{{ get_asset_url('../images/water.jpg') }}" alt="Peaceful water" 
+            style="max-width: 100%; height: auto; margin-top: 12px; border-radius: 8px;" /></p>
       </div>
     </div>
   </div>
@@ -149,7 +151,7 @@ offset=0
 {% dnd_row %}
 {% dnd_module path="@hubspot/rich_text" %}
 {% module_attribute "html" %}
-<div class="content-section-b" id="credentials" style="padding: 28px 0;">
+<div class="content-section-b" id="credentials">
   <div class="container">
     <h2 class="section-heading">Credentials</h2>
 
@@ -212,6 +214,46 @@ offset=0
         <h3 style="margin-top: 30px;"><i class="fa fa-users" style="margin-right: 8px;"></i> Client Reviews</h3>
         <p class="lead"><a href="https://www.healthgrades.com/providers/marc-navon-yhljx" target="_blank"
             rel="noopener noreferrer">See Marc's Reviews</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+
+{# Health Plans Section #}
+{% dnd_section
+vertical_alignment="TOP"
+%}
+{% dnd_column
+width=12,
+offset=0
+%}
+{% dnd_row %}
+{% dnd_module path="@hubspot/rich_text" %}
+{% module_attribute "html" %}
+<div class="content-section-a">
+  <div class="container">
+    <div class="row" id="insurance">
+      <div class="col-lg-5 col-sm-6">
+        <h2 class="section-heading">Insurance and Health Plans</h2>
+        <p class="lead">Marc is in-network with the following insurance plans:</p>
+        <ul class="lead">
+          <li>Blue Cross Blue Shield</li>
+          <li>Harvard Pilgrim Health Care</li>
+          <li>Tufts Health Plan</li>
+          <li>United Healthcare / Optum</li>
+          <li>Aetna</li>
+          <li>Cigna</li>
+        </ul>
+        <p class="lead">If you have questions about insurance coverage or out-of-network benefits, please contact Marc directly.</p>
+      </div>
+      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+        <img class="img-responsive" src="{{ get_asset_url('../images/pebbles.jpg') }}" alt="Wellness and balance" 
+          style="margin-top: 20px; max-width: 100%; height: auto; border-radius: 8px;" />
       </div>
     </div>
   </div>
