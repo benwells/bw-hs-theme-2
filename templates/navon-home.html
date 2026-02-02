@@ -1,0 +1,200 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Navon Therapy Home
+  screenshotPath: ../images/template-previews/home.png
+-->
+{% extends "./layouts/base-navon.html" %}
+
+{% block body %}
+
+{% dnd_area "dnd_area"
+  label="Main content",
+  class="body-container"
+%}
+
+  {# Hero/Title Section #}
+  {% dnd_section
+    vertical_alignment="MIDDLE"
+  %}
+    {% dnd_column
+      width=12,
+      offset=0
+    %}
+      {% dnd_row %}
+        {% dnd_module "hero_section" %}
+          {% module_block module "hero_content" %}
+            <section id="about" class="hero">
+              <div class="container hero-inner">
+                <div class="hero-photo">
+                  <img src="{{ get_asset_url('../images/marc-photo.jpg') }}" alt="Marc Navon" />
+                </div>
+                <div class="hero-copy">
+                  <h1>Marc Navon <span class="creds">MSW, LICSW, MPH</span></h1>
+                  <p class="subtitle">Cognitive Behavioral Therapist</p>
+                  <p class="tagline">"Serving the behavioral healthcare needs of adults."</p>
+
+                  <div class="telehealth">
+                    <img src="{{ get_asset_url('../images/telehealth.svg') }}" width="68" height="68" alt="telehealth" />
+                    <div>
+                      <strong>Offering telehealth services exclusively.</strong>
+                      <div class="muted">Licensed in CA, MA, and SC</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          {% end_module_block %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {# CBT Section #}
+  {% dnd_section
+    vertical_alignment="TOP"
+  %}
+    {% dnd_column
+      width=12,
+      offset=0
+    %}
+      {% dnd_row %}
+        {% dnd_module path="@hubspot/rich_text" %}
+          {% module_attribute "html" %}
+            <div class="content-section-b">
+              <div class="container">
+                <div class="row" id="cbt">
+                  <div class="col-lg-5 col-sm-6">
+                    <h2 class="section-heading">"What is Cognitive Behavioral Therapy?"</h2>
+                    <p class="lead">Marc is a seasoned clinician who uses Cognitive Behavioral Therapy (CBT) in his work with clients. CBT focuses on exploring relationships among a person's thoughts, feelings and behaviors. During CBT Marc actively works with clients to uncover unhealthy patterns of thought and how they may be causing self-destructive behaviors and beliefs.</p>
+                    <p class="lead">By addressing these patterns, the client and Marc work together to develop constructive ways of thinking that will produce healthier behaviors and beliefs. For instance, CBT can help clients replace thoughts that lead to low self-esteem ("I can't do anything right") with positive expectations ("I can do this most of the time, based on my prior experiences").</p>
+                  </div>
+                  <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <p class="lead">The core principles of CBT are identifying negative or false beliefs and testing or restructuring them. Oftentimes clients being treated with CBT will have homework in between sessions where they practice replacing negative thoughts with more realistic thoughts based on prior experiences or record their negative thoughts in a journal.</p>
+                    <p class="lead">Studies of CBT have shown it to be an effective treatment for a wide variety of mental illnesses, including depression, anxiety disorders, bipolar disorder, eating disorders and schizophrenia. Individuals who undergo CBT show changes in brain activity, suggesting that this therapy actually improves your brain functioning as well. Cognitive Behavioral Therapy has a considerable amount of scientific data supporting its use.</p>
+                    <p class="lead"><em>Source: <a href="https://www.nami.org/Learn-More/Treatment/Psychotherapy" target="_blank">NAMI</a></em></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {# Biography Section #}
+  {% dnd_section
+    vertical_alignment="TOP"
+  %}
+    {% dnd_column
+      width=12,
+      offset=0
+    %}
+      {% dnd_row %}
+        {% dnd_module path="@hubspot/rich_text" %}
+          {% module_attribute "html" %}
+            <div class="content-section-a">
+              <div class="container">
+                <div class="row" id="biography">
+                  <div class="col-lg-5 col-sm-6">
+                    <img class="img img-responsive" src="{{ get_asset_url('../images/tree.svg') }}" style="max-width: 200px; margin-bottom: 20px;" />
+                    <h2 class="section-heading">Biography</h2>
+                    <p class="lead">Marc Navon earned his bachelor's degree in Psychology at the University of Massachusetts, Amherst. He holds two master's degrees in Social Work from Simmons College in Boston, and in Public Health from the University of Massachusetts, Amherst.</p>
+                    <p class="lead">Marc began his clinical career at the North Shore Children's Hospital in Salem, MA working with children and families in psychiatric inpatient and outpatient settings and on the medical floors.</p>
+                  </div>
+                  <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <p class="lead">He has also held positions as Director of Social Work and Outpatient Departments at Mt. Pleasant Hospital, a substance abuse treatment facility formally in Lynn, MA; Director of Utilization Management at the Massachusetts Department of Mental Health; Operations Manager of the Behavioral Health Program at Neighborhood Health Plan in Boston; and Managing Director of the Center for Health Policy and Research at the UMass Medical School in Worcester, MA. Marc has been in private practice since 1986 serving clients of all ages for a variety of behavioral health issues.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {# Credentials Section - To be added #}
+  {% dnd_section
+    vertical_alignment="TOP"
+  %}
+    {% dnd_column
+      width=12,
+      offset=0
+    %}
+      {% dnd_row %}
+        {% dnd_module path="@hubspot/rich_text" %}
+          {% module_attribute "html" %}
+            <div class="content-section-b">
+              <div class="container">
+                <div class="row" id="credentials">
+                  <div class="col-lg-12">
+                    <h2 class="section-heading">Credentials</h2>
+                    <p class="lead"><strong>Licensure/Certification</strong></p>
+                    <ul>
+                      <li>California Licensed Clinical Social Worker License/Registration #: 74560</li>
+                      <li>Massachusetts Licensed Independent Clinical Social Worker, Mass. License #: 105701</li>
+                      <li>South Carolina Licensed Independent Social Worker. License #: 15915</li>
+                      <li>Diplomate and Certified CBT Therapist, Academy of Cognitive & Behavioral Therapies</li>
+                      <li>NPI #: 13169212306</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {# Contact Section #}
+  {% dnd_section
+    background_color={ "color": "#0b6b5a" }
+  %}
+    {% dnd_column
+      width=12,
+      offset=0
+    %}
+      {% dnd_row %}
+        {% dnd_module path="@hubspot/rich_text" %}
+          {% module_attribute "html" %}
+            <div class="banner">
+              <div class="container">
+                <h2 id="contact">Contact Us:</h2>
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <i class="fa fa-map-marker"></i>
+                    <div>
+                      <strong>Address</strong>
+                      8 Jackson Road<br>
+                      Marblehead, MA 01945
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <i class="fa fa-phone"></i>
+                    <div>
+                      <strong>Phone</strong>
+                      (781) 789-0515
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <i class="fa fa-envelope"></i>
+                    <div>
+                      <strong>Email</strong>
+                      <a href="mailto:mnavon@comcast.net">mnavon@comcast.net</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+{% end_dnd_area %}
+
+{% endblock body %}

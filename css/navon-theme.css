@@ -1,0 +1,303 @@
+/* Navon Therapy Modern Minimal Styles */
+
+:root {
+  --bg: #ffffff;
+  --muted: #6b6b6b;
+  --text: #202020;
+  --accent: #0b6b5a;
+  --max: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: saturate(120%) blur(4px);
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 20px;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.brand a {
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.brand .creds {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.site-nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+.contact-compact img {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+
+/* Hero Section */
+.hero {
+  padding: 28px 0;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.hero-photo img {
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.hero-copy .creds {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.subtitle {
+  margin: 4px 0 8px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.telehealth {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 12px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.telehealth img {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+}
+
+.telehealth .muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Content Sections */
+.content-section-a,
+.content-section-b {
+  padding: 40px 0;
+}
+
+.content-section-a .container .row,
+.content-section-b .container .row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.section-heading {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.lead {
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  background: #f1f1f1;
+  border-radius: 999px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Lists */
+ul {
+  line-height: 1.8;
+}
+
+/* Contact Section */
+.banner {
+  padding: 40px 0;
+  background: linear-gradient(135deg, #0b6b5a 0%, #085d50 100%);
+  color: #ffffff;
+}
+
+.banner h2 {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-item i {
+  font-size: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contact-item strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.contact-item a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.contact-item a:hover {
+  border-bottom-color: #ffffff;
+}
+
+/* Footer */
+footer {
+  padding: 36px 0;
+  border-top: 1px solid #efefef;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.list-inline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.list-inline a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.list-inline a:hover {
+  color: var(--text);
+}
+
+.footer-menu-divider {
+  opacity: 0.5;
+}
+
+.copyright {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-photo img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .content-section-a .container .row,
+  .content-section-b .container .row {
+    flex-direction: column;
+  }
+  
+  .telehealth {
+    max-width: 100%;
+  }
+}

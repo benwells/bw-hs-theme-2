@@ -1,16 +1,15 @@
 /* Theme base styles */
 
+/* Navon Therapy Theme Styles */
+{% include './navon-theme.css' %}
+
 /* Tools
 Any animations, or functions used throughout the project.
 Note: _macros.css needs to be imported into each stylesheet where macros are used and not included here
 */
 
-/* Generic
-This is where reset, normalize & box-sizing styles go.
-*/
-
+/* Generic - Minimal resets only */
 {% include './generic/_reset.css' %}
-{% include './generic/_normalize.css' %}
 
 /* Objects
 Non-cosmetic design patterns including grid and layout classes)

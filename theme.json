@@ -1,12 +1,12 @@
 {
-  "label": "HS Theme",
+  "label": "Navon Therapy Theme",
   "author": {
     "name": "Ben Wells",
     "email": "mrbrwells@gmail.com",
     "url": "https://github.com/benwells"
   },
   "documentation_url": "https://github.com/benwells/bw-hs-theme-1",
-  "preview_path": "./templates/home.html",
+  "preview_path": "./templates/navon-home.html",
   "screenshot_path": "./images/template-previews/home.png",
   "enable_domain_stylesheets": false,
   "license": "./license.txt",
