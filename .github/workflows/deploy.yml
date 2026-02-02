@@ -35,12 +35,17 @@ jobs:
         run: |
           mkdir -p ~/.hscli
           cat > ~/.hscli/config.yml << EOF
-          defaultPortal: production
-          portals:
+          defaultAccount: ${{ secrets.HUBSPOT_PORTAL_ID }}
+          accounts:
             - name: production
-              portalId: ${{ secrets.HUBSPOT_PORTAL_ID }}
+              accountId: ${{ secrets.HUBSPOT_PORTAL_ID }}
+              env: prod
               authType: personalaccesskey
+              accountType: STANDARD
               personalAccessKey: ${{ secrets.HUBSPOT_ACCESS_KEY }}
+              auth:
+                tokenInfo:
+                  accessToken: ${{ secrets.HUBSPOT_ACCESS_KEY }}
           EOF
 
       - name: Deploy to HubSpot
