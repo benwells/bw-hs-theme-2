@@ -1,0 +1,20 @@
+[
+  {
+    "id": "title",
+    "name": "title",
+    "label": "Section Title",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Schedule an Appointment"
+  },
+  {
+    "id": "description",
+    "name": "description",
+    "label": "Description",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Select your preferred date and time for a consultation"
+  }
+]

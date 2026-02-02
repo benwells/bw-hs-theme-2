@@ -23,6 +23,7 @@ export default defineConfig({
       entry: {
         'header-nav': resolve(__dirname, 'src/components/HeaderNav.svelte'),
         'hero-banner': resolve(__dirname, 'src/components/HeroBanner.svelte'),
+        'appointment-scheduler': resolve(__dirname, 'src/components/AppointmentScheduler.svelte'),
       },
       formats: ['es'], // ESM format for HubSpot
       fileName: (format, entryName) => `${entryName}.js`
