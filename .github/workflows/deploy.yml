@@ -34,12 +34,16 @@ jobs:
       - name: Create HubSpot config
         run: |
           mkdir -p ~/.hscli
-          echo "defaultPortal: ${{ secrets.HUBSPOT_PORTAL_ID }}" > ~/.hscli/config.yml
-          echo "portals:" >> ~/.hscli/config.yml
-          echo "  - name: production" >> ~/.hscli/config.yml
-          echo "    portalId: ${{ secrets.HUBSPOT_PORTAL_ID }}" >> ~/.hscli/config.yml
-          echo "    authType: personalaccesskey" >> ~/.hscli/config.yml
-          echo "    personalAccessKey: ${{ secrets.HUBSPOT_ACCESS_KEY }}" >> ~/.hscli/config.yml
+          cat > ~/.hscli/config.yml << EOF
+          defaultPortal: production
+          portals:
+            - name: production
+              portalId: ${{ secrets.HUBSPOT_PORTAL_ID }}
+              authType: personalaccesskey
+              auth:
+                tokenInfo:
+                  accessToken: ${{ secrets.HUBSPOT_ACCESS_KEY }}
+          EOF
 
       - name: Deploy to HubSpot
         run: |
