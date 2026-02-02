@@ -22,12 +22,12 @@
       offset=0
     %}
       {% dnd_row %}
-        {% dnd_module "hero_section" %}
-          {% module_block module "hero_content" %}
+        {% dnd_module path="@hubspot/rich_text" %}
+          {% module_attribute "html" %}
             <section id="about" class="hero">
               <div class="container hero-inner">
                 <div class="hero-photo">
-                  <img src="{{ get_asset_url('../images/marc-photo.jpg') }}" alt="Marc Navon" />
+                  <img src="{{ get_asset_url('../../images/marc-photo.jpg') }}" alt="Marc Navon" />
                 </div>
                 <div class="hero-copy">
                   <h1>Marc Navon <span class="creds">MSW, LICSW, MPH</span></h1>
@@ -35,7 +35,7 @@
                   <p class="tagline">"Serving the behavioral healthcare needs of adults."</p>
 
                   <div class="telehealth">
-                    <img src="{{ get_asset_url('../images/telehealth.svg') }}" width="68" height="68" alt="telehealth" />
+                    <img src="{{ get_asset_url('../../images/telehealth.svg') }}" width="68" height="68" alt="telehealth" />
                     <div>
                       <strong>Offering telehealth services exclusively.</strong>
                       <div class="muted">Licensed in CA, MA, and SC</div>
@@ -44,7 +44,7 @@
                 </div>
               </div>
             </section>
-          {% end_module_block %}
+          {% end_module_attribute %}
         {% end_dnd_module %}
       {% end_dnd_row %}
     {% end_dnd_column %}
@@ -98,7 +98,7 @@
               <div class="container">
                 <div class="row" id="biography">
                   <div class="col-lg-5 col-sm-6">
-                    <img class="img img-responsive" src="{{ get_asset_url('../images/tree.svg') }}" style="max-width: 200px; margin-bottom: 20px;" />
+                    <img class="img img-responsive" src="{{ get_asset_url('../../images/tree.svg') }}" style="max-width: 200px; margin-bottom: 20px;" />
                     <h2 class="section-heading">Biography</h2>
                     <p class="lead">Marc Navon earned his bachelor's degree in Psychology at the University of Massachusetts, Amherst. He holds two master's degrees in Social Work from Simmons College in Boston, and in Public Health from the University of Massachusetts, Amherst.</p>
                     <p class="lead">Marc began his clinical career at the North Shore Children's Hospital in Salem, MA working with children and families in psychiatric inpatient and outpatient settings and on the medical floors.</p>
