@@ -27,7 +27,7 @@
             <section id="about" class="hero">
               <div class="container hero-inner">
                 <div class="hero-photo">
-                  <img src="{{ get_asset_url('../../images/marc-photo.jpg') }}" alt="Marc Navon" />
+                  <img src="{{ get_asset_url('../images/marc-photo.jpg') }}" alt="Marc Navon" />
                 </div>
                 <div class="hero-copy">
                   <h1>Marc Navon <span class="creds">MSW, LICSW, MPH</span></h1>
@@ -35,7 +35,7 @@
                   <p class="tagline">"Serving the behavioral healthcare needs of adults."</p>
 
                   <div class="telehealth">
-                    <img src="{{ get_asset_url('../../images/telehealth.svg') }}" width="68" height="68" alt="telehealth" />
+                    <img src="{{ get_asset_url('../images/telehealth.svg') }}" width="68" height="68" alt="telehealth" />
                     <div>
                       <strong>Offering telehealth services exclusively.</strong>
                       <div class="muted">Licensed in CA, MA, and SC</div>
@@ -98,7 +98,7 @@
               <div class="container">
                 <div class="row" id="biography">
                   <div class="col-lg-5 col-sm-6">
-                    <img class="img img-responsive" src="{{ get_asset_url('../../images/tree.svg') }}" style="max-width: 200px; margin-bottom: 20px;" />
+                    <img class="img img-responsive" src="{{ get_asset_url('../images/tree.svg') }}" style="max-width: 200px; margin-bottom: 20px;" />
                     <h2 class="section-heading">Biography</h2>
                     <p class="lead">Marc Navon earned his bachelor's degree in Psychology at the University of Massachusetts, Amherst. He holds two master's degrees in Social Work from Simmons College in Boston, and in Public Health from the University of Massachusetts, Amherst.</p>
                     <p class="lead">Marc began his clinical career at the North Shore Children's Hospital in Salem, MA working with children and families in psychiatric inpatient and outpatient settings and on the medical floors.</p>
@@ -126,19 +126,67 @@
       {% dnd_row %}
         {% dnd_module path="@hubspot/rich_text" %}
           {% module_attribute "html" %}
-            <div class="content-section-b">
+            <div class="content-section-b" id="credentials">
               <div class="container">
-                <div class="row" id="credentials">
-                  <div class="col-lg-12">
-                    <h2 class="section-heading">Credentials</h2>
-                    <p class="lead"><strong>Licensure/Certification</strong></p>
-                    <ul>
-                      <li>California Licensed Clinical Social Worker License/Registration #: 74560</li>
-                      <li>Massachusetts Licensed Independent Clinical Social Worker, Mass. License #: 105701</li>
-                      <li>South Carolina Licensed Independent Social Worker. License #: 15915</li>
-                      <li>Diplomate and Certified CBT Therapist, Academy of Cognitive & Behavioral Therapies</li>
-                      <li>NPI #: 13169212306</li>
-                    </ul>
+                <h2 class="section-heading">Credentials</h2>
+                
+                <div class="row" style="margin-top: 30px;">
+                  <div class="col-lg-6 col-sm-6">
+                    <h3><i class="fa fa-certificate" style="margin-right: 8px;"></i> Licensure/Certification</h3>
+                    <div class="lead">
+                      <p><strong>California Licensed Clinical Social Worker</strong><br>
+                      License/Registration #: 74560</p>
+                      
+                      <p><strong>Massachusetts Licensed Independent Clinical Social Worker</strong><br>
+                      License #: 105701</p>
+                      
+                      <p><strong>South Carolina Licensed Independent Social Worker</strong><br>
+                      License #: 15915</p>
+                      
+                      <p><strong>Diplomate and Certified CBT Therapist</strong><br>
+                      Academy of Cognitive & Behavioral Therapies</p>
+                      
+                      <p><strong>NPI #:</strong> 13169212306</p>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-6 col-sm-6">
+                    <h3><i class="fa fa-institution" style="margin-right: 8px;"></i> Education</h3>
+                    <p class="lead" style="margin-top: 30px;">
+                      <strong>SIMMONS COLLEGE, Boston, MA</strong><br>
+                      <em>Master of Social Work, May 1981</em><br><br>
+                      
+                      <strong>UNIVERSITY OF MASSACHUSETTS, Amherst, MA</strong><br>
+                      <em>Master of Public Health, May 2010</em><br>
+                      <em>B.A. in Psychology, Cum Laude, May 1977</em>
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="row" style="margin-top: 30px;">
+                  <div class="col-lg-6 col-sm-6">
+                    <h3><i class="fa fa-medkit" style="margin-right: 8px;"></i> Treatment Expertise</h3>
+                    <div class="lead">
+                      <p>Marc has expertise treating people of all ages with a wide range of difficulties, including:</p>
+                      <ul>
+                        <li>Depression</li>
+                        <li>Anxiety</li>
+                        <li>Bipolar Disorder</li>
+                        <li>Addictions (Alcohol, Opiates and other Substances)</li>
+                        <li>Attention Deficit Disorder</li>
+                        <li>Marital and Family Problems</li>
+                        <li>Career Challenges</li>
+                        <li>Other Psychiatric Difficulties</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-6 col-sm-6">
+                    <h3><i class="fa fa-file-pdf-o" style="margin-right: 8px;"></i> Resume</h3>
+                    <p class="lead"><a href="/docs/Marc-Navon-Clinical-Resume.pdf" target="_blank">Click Here to View Marc's Resume</a></p>
+                    
+                    <h3 style="margin-top: 30px;"><i class="fa fa-users" style="margin-right: 8px;"></i> Client Reviews</h3>
+                    <p class="lead"><a href="https://www.healthgrades.com/providers/marc-navon-yhljx" target="_blank" rel="noopener noreferrer">See Marc's Reviews</a></p>
                   </div>
                 </div>
               </div>
