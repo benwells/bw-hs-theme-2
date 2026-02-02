@@ -40,9 +40,7 @@ jobs:
             - name: production
               portalId: ${{ secrets.HUBSPOT_PORTAL_ID }}
               authType: personalaccesskey
-              auth:
-                tokenInfo:
-                  accessToken: ${{ secrets.HUBSPOT_ACCESS_KEY }}
+              personalAccessKey: ${{ secrets.HUBSPOT_ACCESS_KEY }}
           EOF
 
       - name: Deploy to HubSpot
