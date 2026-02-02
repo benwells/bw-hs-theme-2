@@ -29,27 +29,24 @@ jobs:
         run: bun run build
 
       - name: Setup HubSpot CLI
-        run: bun install -g @hubspot/cli
+        run: bun add -g @hubspot/cli
 
       - name: Create HubSpot config
         run: |
-          mkdir -p ~/.config/hubspot
-          echo "defaultPortal: ${{ secrets.HUBSPOT_PORTAL_ID }}" > ~/.config/hubspot/config.yml
-          echo "portals:" >> ~/.config/hubspot/config.yml
-          echo "  - name: production" >> ~/.config/hubspot/config.yml
-          echo "    portalId: ${{ secrets.HUBSPOT_PORTAL_ID }}" >> ~/.config/hubspot/config.yml
-          echo "    authType: personalaccesskey" >> ~/.config/hubspot/config.yml
-          echo "    personalAccessKey: ${{ secrets.HUBSPOT_ACCESS_KEY }}" >> ~/.config/hubspot/config.yml
-          echo "    auth:" >> ~/.config/hubspot/config.yml
-          echo "      tokenInfo:" >> ~/.config/hubspot/config.yml
-          echo "        accessToken: ${{ secrets.HUBSPOT_ACCESS_KEY }}" >> ~/.config/hubspot/config.yml
+          mkdir -p ~/.hscli
+          echo "defaultPortal: ${{ secrets.HUBSPOT_PORTAL_ID }}" > ~/.hscli/config.yml
+          echo "portals:" >> ~/.hscli/config.yml
+          echo "  - name: production" >> ~/.hscli/config.yml
+          echo "    portalId: ${{ secrets.HUBSPOT_PORTAL_ID }}" >> ~/.hscli/config.yml
+          echo "    authType: personalaccesskey" >> ~/.hscli/config.yml
+          echo "    personalAccessKey: ${{ secrets.HUBSPOT_ACCESS_KEY }}" >> ~/.hscli/config.yml
 
       - name: Deploy to HubSpot
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-            hs upload . my-first-theme --portal=${{ secrets.HUBSPOT_PORTAL_ID }}
+            hs cms upload . bw-hs-theme-2
           else
-            hs upload . my-first-theme-dev --portal=${{ secrets.HUBSPOT_PORTAL_ID }}
+            hs cms upload . bw-hs-theme-2-dev
           fi
 
       - name: Comment on PR
@@ -61,5 +58,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '✅ Theme deployed to HubSpot dev environment: `my-first-theme-dev`'
+              body: '✅ Theme deployed to HubSpot dev environment: `bw-hs-theme-2-dev`'
             })
