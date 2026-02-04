@@ -2,9 +2,11 @@
 
 <script>
   // Svelte 5 runes demonstration
-  // Props from HubSpot module
-  export let title = 'Schedule an Appointment';
-  export let description = 'Select your preferred date and time';
+  // $props - Props from HubSpot module (Svelte 5 rune)
+  let { 
+    title = 'Schedule an Appointment',
+    description = 'Select your preferred date and time'
+  } = $props();
   
   // $state - reactive state management (Svelte 5 rune)
   let selectedDate = $state('');

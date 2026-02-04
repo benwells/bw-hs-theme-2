@@ -1,17 +1,35 @@
 <svelte:options customElement="header-nav" />
 
 <script>
-  // Props from HubSpot module fields
-  export let logo = '';
-  export let navigation = [];
-  export let ctaText = 'Get Started';
-  export let ctaUrl = '#';
+  // $props - Props from HubSpot module fields (Svelte 5 rune)
+  let { 
+    logo = '', 
+    navigation = [], 
+    ctaText = 'Get Started', 
+    ctaUrl = '#' 
+  } = $props();
 
-  let mobileMenuOpen = false;
+  // $state - reactive state for mobile menu (Svelte 5 rune)
+  let mobileMenuOpen = $state(false);
 
   function toggleMobileMenu() {
     mobileMenuOpen = !mobileMenuOpen;
   }
+
+  // $effect - close menu when clicking outside (Svelte 5 rune)
+  $effect(() => {
+    if (!mobileMenuOpen) return;
+
+    function handleClickOutside(event) {
+      const nav = event.target.closest('.header-nav');
+      if (!nav) {
+        mobileMenuOpen = false;
+      }
+    }
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  });
 </script>
 
 <header class="header-nav">
@@ -26,7 +44,7 @@
 
     <button 
       class="header-nav__mobile-toggle" 
-      on:click={toggleMobileMenu}
+      onclick={toggleMobileMenu}
       aria-label="Toggle menu"
       aria-expanded={mobileMenuOpen}
     >

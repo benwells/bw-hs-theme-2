@@ -1,24 +1,68 @@
 <svelte:options customElement="hero-banner" />
 
 <script>
-  // Props from HubSpot module fields
-  export let heading = 'Welcome to Our Site';
-  export let subheading = 'Build something amazing';
-  export let ctaPrimaryText = 'Get Started';
-  export let ctaPrimaryUrl = '#';
-  export let ctaSecondaryText = 'Learn More';
-  export let ctaSecondaryUrl = '#';
-  export let backgroundImage = '';
-  export let backgroundOverlay = 'rgba(0, 0, 0, 0.4)';
-  export let alignment = 'center'; // left, center, right
+  // $props - Props from HubSpot module fields (Svelte 5 rune)
+  let { 
+    heading = 'Welcome to Our Site',
+    subheading = 'Build something amazing',
+    ctaPrimaryText = 'Get Started',
+    ctaPrimaryUrl = '#',
+    ctaSecondaryText = 'Learn More',
+    ctaSecondaryUrl = '#',
+    backgroundImage = '',
+    backgroundOverlay = 'rgba(0, 0, 0, 0.4)',
+    alignment = 'center' // left, center, right
+  } = $props();
+
+  // $state - reactive state for animation tracking (Svelte 5 rune)
+  let isVisible = $state(false);
+
+  // $derived - computed CSS classes (Svelte 5 rune)
+  let alignmentClass = $derived(() => {
+    const classes = {
+      left: 'hero-banner--left',
+      center: 'hero-banner--center',
+      right: 'hero-banner--right'
+    };
+    return classes[alignment] || classes.center;
+  });
+
+  // $derived - computed inline styles (Svelte 5 rune)
+  let inlineStyles = $derived(() => {
+    const bgImageUrl = backgroundImage ? `url(${backgroundImage})` : 'none';
+    return `--bg-image: ${bgImageUrl}; --bg-overlay: ${backgroundOverlay};`;
+  });
+
+  // $effect - intersection observer for scroll animations (Svelte 5 rune)
+  $effect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            isVisible = true;
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const heroElement = document.querySelector('.hero-banner');
+    if (heroElement) {
+      observer.observe(heroElement);
+    }
+
+    return () => {
+      if (heroElement) {
+        observer.unobserve(heroElement);
+      }
+    };
+  });
 </script>
 
 <section 
-  class="hero-banner" 
-  class:hero-banner--left={alignment === 'left'}
-  class:hero-banner--center={alignment === 'center'}
-  class:hero-banner--right={alignment === 'right'}
-  style="--bg-image: url({backgroundImage}); --bg-overlay: {backgroundOverlay};"
+  class="hero-banner {alignmentClass()}"
+  class:is-visible={isVisible}
+  style={inlineStyles()}
 >
   <div class="hero-banner__container">
     <div class="hero-banner__content">
