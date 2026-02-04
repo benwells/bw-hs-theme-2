@@ -12,6 +12,13 @@ export default defineConfig({
       }
     })
   ],
+  optimizeDeps: {
+    // Only scan demo HTML files to avoid HubL parsing errors in templates/modules
+    entries: [
+      'demo-local.html',
+      'templates/svelte-demo.html'
+    ]
+  },
   build: {
     // Output to js/dist for HubSpot
     outDir: 'js/dist',
