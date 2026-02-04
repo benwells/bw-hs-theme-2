@@ -224,6 +224,54 @@ offset=0
 {% end_dnd_column %}
 {% end_dnd_section %}
 
+{# Publications Section #}
+{% dnd_section
+vertical_alignment="TOP"
+%}
+{% dnd_column
+width=12,
+offset=0
+%}
+{% dnd_row %}
+{% dnd_module path="@hubspot/rich_text" %}
+{% module_attribute "html" %}
+<div class="content-section-a" id="publications">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <img class="img img-responsive" src="{{ get_asset_url('../images/tree.svg') }}" 
+          style="max-width: 200px; margin-bottom: 20px;" />
+        <hr class="section-heading-spacer" />
+        <div class="clearfix"></div>
+        <h2 class="section-heading">Publications</h2>
+        <div class="lead">
+          <dl>
+            <dt><b>Marc Navon, M.S.W., L.I.C.S.W., Deborah Nelson, Ph.D., Maria Pagano, Ph.D., Michael Murphy, Ed.D.</b> <i>Use of the Pediatric Symptom Checklist in Strategies to Improve Preventive Behavioral Health Care.</i> Psychiatr Serv. 2001 Jun; 52(6): 800–804.</dt>
+            <dd><a href="http://dx.doi.org/10.1176/appi.ps.52.6.800" target="_blank" rel="noopener noreferrer">http://dx.doi.org/10.1176/appi.ps.52.6.800</a></dd>
+            
+            <dt><b>Raymond B. Jr. Flannery, M. Annette Hanson, Walter E. Penk, Gary J. Pastva, Marc A. Navon, Georgina J. Flannery.</b> <i>Replicated Declines in Assault Rates After Implementation.</i> Psychiatric Services. 1998.</dt>
+            <dd><a href="http://ps.psychiatryonline.org/doi/pdf/10.1176/ps.49.2.241" target="_blank" rel="noopener noreferrer">http://ps.psychiatryonline.org/doi/pdf/10.1176/ps.49.2.241</a></dd>
+            
+            <dt><b>Raymond B. Jr. Flannery, M. Annette Hanson, Walter E. Penk, Gary J. Pastva, Marc A. Navon, Georgina J. Flannery.</b> <i>Hospital Downsizing and Patients' Assaults on Staff.</i> Psychiatric Quarterly. March 1997, Volume 68, Issue 1, pp 67-76</dt>
+            <dd><a href="http://link.springer.com/article/10.1023%2FA%3A1025409222084" target="_blank" rel="noopener noreferrer">http://link.springer.com/article/10.1023%2FA%3A1025409222084</a></dd>
+            
+            <dt><b>Eileen Elias and Marc Navon.</b> <i>Implementing managed care in a state mental health authority: Implications for organizational change.</i> Smith College Studies in Social Work. Volume 66, Issue 3, 1996. Special Issue: The Corporate and Human Faces of Managed Health Care: The Interplay between Mental Health Policy and Practice.</dt>
+            <dd><a href="http://link.springer.com/article/10.1023%2FA%3A1022805814151" target="_blank" rel="noopener noreferrer">http://link.springer.com/article/10.1023%2FA%3A1022805814151</a></dd>
+            
+            <dt><b>Eileen Elias and Marc Navon.</b> <i>The Massachusetts Experience With Managed Mental Health Care And Medicaid. Health Affairs. In Joseph J. Bevilacqua Perspectives: Why States Embrace May Be Premature.</i> Health Affairs, Fall 1995.14, no.3:45-46.</dt>
+            <dd><a href="http://content.healthaffairs.org/content/22/1/101.full#sec-19" target="_blank" rel="noopener noreferrer">http://content.healthaffairs.org/content/22/1/101.full#sec-19</a></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+
 {# Health Plans Section #}
 {% dnd_section
 vertical_alignment="TOP"
