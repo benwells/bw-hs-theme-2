@@ -2,5 +2,5 @@
   "label": "Appointment Scheduler (Svelte 5)",
   "host_template_types": ["PAGE"],
   "icon": "CALENDAR",
-  "categories": ["BOOKING_AND_EVENTS"]
+  "categories": ["FORMS_AND_BUTTONS"]
 }
