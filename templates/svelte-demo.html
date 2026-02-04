@@ -1,7 +1,7 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: Svelte 5 Components Demo
+  label: Appointment Scheduler
   screenshotPath: ../images/template-previews/home.png
 -->
 {% extends "./layouts/base.html" %}
@@ -12,139 +12,16 @@
   class="body-container"
 %}
 
-  {# Hero Banner Component Demo #}
-  {% dnd_section
-    background_color={ "color": "#f8f9fa" }
-  %}
-    {% dnd_column
-      width=12,
-      offset=0
-    %}
-      {% dnd_row %}
-        {% dnd_module path="../../modules/hero-banner.module" %}
-          {% module_attribute "heading" %}Svelte 5 Components Demo{% end_module_attribute %}
-          {% module_attribute "subheading" %}Experience modern reactive web components built with Svelte 5 runes{% end_module_attribute %}
-          {% module_attribute "ctaPrimaryText" %}Get Started{% end_module_attribute %}
-          {% module_attribute "ctaPrimaryUrl" %}#appointment{% end_module_attribute %}
-          {% module_attribute "ctaSecondaryText" %}Learn More{% end_module_attribute %}
-          {% module_attribute "ctaSecondaryUrl" %}#about{% end_module_attribute %}
-        {% end_dnd_module %}
-      {% end_dnd_row %}
-    {% end_dnd_column %}
-  {% end_dnd_section %}
-
-  {# About Svelte 5 Runes Section #}
+  {# Appointment Scheduler #}
   {% dnd_section %}
     {% dnd_column
       width=12,
       offset=0
     %}
       {% dnd_row %}
-        {% dnd_module path="@hubspot/rich_text" %}
-          {% module_attribute "html" %}
-            <div id="about" style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
-              <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Svelte 5 Runes in Action</h2>
-              
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
-                <div style="padding: 30px; border: 2px solid #e0e0e0; border-radius: 8px;">
-                  <h3 style="color: #ff3e00; margin-bottom: 15px;">💡 $props()</h3>
-                  <p>Component props from HubSpot module fields. Destructured and reactive.</p>
-                  <code style="background: #f5f5f5; padding: 4px 8px; border-radius: 4px; font-size: 0.9em;">let { title } = $props()</code>
-                </div>
-                
-                <div style="padding: 30px; border: 2px solid #e0e0e0; border-radius: 8px;">
-                  <h3 style="color: #ff3e00; margin-bottom: 15px;">🔄 $state()</h3>
-                  <p>Reactive local state. Updates trigger UI re-renders automatically.</p>
-                  <code style="background: #f5f5f5; padding: 4px 8px; border-radius: 4px; font-size: 0.9em;">let count = $state(0)</code>
-                </div>
-                
-                <div style="padding: 30px; border: 2px solid #e0e0e0; border-radius: 8px;">
-                  <h3 style="color: #ff3e00; margin-bottom: 15px;">📊 $derived()</h3>
-                  <p>Computed values that automatically recalculate when dependencies change.</p>
-                  <code style="background: #f5f5f5; padding: 4px 8px; border-radius: 4px; font-size: 0.9em;">let doubled = $derived(count * 2)</code>
-                </div>
-                
-                <div style="padding: 30px; border: 2px solid #e0e0e0; border-radius: 8px;">
-                  <h3 style="color: #ff3e00; margin-bottom: 15px;">⚡ $effect()</h3>
-                  <p>Side effects that run when dependencies change. Perfect for localStorage, APIs, etc.</p>
-                  <code style="background: #f5f5f5; padding: 4px 8px; border-radius: 4px; font-size: 0.9em;">$effect(() => {...})</code>
-                </div>
-              </div>
-
-              <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 12px; text-align: center;">
-                <h3 style="font-size: 1.8rem; margin-bottom: 20px;">See It In Action Below 👇</h3>
-                <p style="font-size: 1.1rem; opacity: 0.9; max-width: 700px; margin: 0 auto;">
-                  The appointment scheduler demonstrates all four runes working together:
-                  form validation, auto-save to localStorage, real-time preview, and more.
-                </p>
-              </div>
-            </div>
-          {% end_module_attribute %}
-        {% end_dnd_module %}
-      {% end_dnd_row %}
-    {% end_dnd_column %}
-  {% end_dnd_section %}
-
-  {# Appointment Scheduler Component Demo #}
-  {% dnd_section
-    background_color={ "color": "#f8f9fa" }
-  %}
-    {% dnd_column
-      width=12,
-      offset=0
-    %}
-      {% dnd_row %}
-        {% dnd_module 
-          path="../../modules/appointment-scheduler.module"
-          id="appointment"
-        %}
-          {% module_attribute "title" %}Schedule Your Appointment{% end_module_attribute %}
-          {% module_attribute "description" %}This form demonstrates Svelte 5 runes: real-time validation ($derived), auto-save ($effect), and reactive state ($state){% end_module_attribute %}
-        {% end_dnd_module %}
-      {% end_dnd_row %}
-    {% end_dnd_column %}
-  {% end_dnd_section %}
-
-  {# Features Explanation #}
-  {% dnd_section %}
-    {% dnd_column
-      width=12,
-      offset=0
-    %}
-      {% dnd_row %}
-        {% dnd_module path="@hubspot/rich_text" %}
-          {% module_attribute "html" %}
-            <div style="padding: 60px 20px; max-width: 1200px; margin: 0 auto;">
-              <h2 style="text-align: center; margin-bottom: 40px; font-size: 2rem;">Features Demonstrated</h2>
-              
-              <div style="display: grid; gap: 20px;">
-                <div style="padding: 25px; background: #fff; border-left: 4px solid #ff3e00; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                  <h4 style="margin-top: 0; color: #ff3e00;">✅ Real-time Form Validation</h4>
-                  <p style="margin: 0;">Submit button only enables when all required fields are filled. Uses <code>$derived()</code> to automatically compute validity.</p>
-                </div>
-                
-                <div style="padding: 25px; background: #fff; border-left: 4px solid #ff3e00; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                  <h4 style="margin-top: 0; color: #ff3e00;">💾 Auto-save to localStorage</h4>
-                  <p style="margin: 0;">Form data automatically saves as you type using <code>$effect()</code>. Refresh the page to see your draft restored!</p>
-                </div>
-                
-                <div style="padding: 25px; background: #fff; border-left: 4px solid #ff3e00; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                  <h4 style="margin-top: 0; color: #ff3e00;">📅 Live Appointment Preview</h4>
-                  <p style="margin: 0;">See your appointment formatted in real-time using <code>$derived()</code> for computed date formatting.</p>
-                </div>
-                
-                <div style="padding: 25px; background: #fff; border-left: 4px solid #ff3e00; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                  <h4 style="margin-top: 0; color: #ff3e00;">🎨 Reactive UI Updates</h4>
-                  <p style="margin: 0;">All form inputs use <code>$state()</code> for instant UI reactivity without manual DOM manipulation.</p>
-                </div>
-              </div>
-
-              <div style="margin-top: 40px; padding: 30px; background: #fff3cd; border-radius: 8px; border: 1px solid #ffc107;">
-                <h4 style="margin-top: 0;">💡 Developer Tip</h4>
-                <p style="margin: 0;">Open your browser's DevTools Console and localStorage to see the auto-save in action. Fill out the form, refresh the page, and watch your data come back!</p>
-              </div>
-            </div>
-          {% end_module_attribute %}
+        {% dnd_module path="../../modules/appointment-scheduler.module" %}
+          {% module_attribute "title" %}Schedule an Appointment{% end_module_attribute %}
+          {% module_attribute "description" %}Select your preferred date and time for a consultation{% end_module_attribute %}
         {% end_dnd_module %}
       {% end_dnd_row %}
     {% end_dnd_column %}

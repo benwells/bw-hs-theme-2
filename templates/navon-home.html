@@ -312,6 +312,23 @@ offset=0
 {% end_dnd_column %}
 {% end_dnd_section %}
 
+{# Appointment Scheduler Section #}
+{% dnd_section
+vertical_alignment="TOP"
+%}
+{% dnd_column
+width=12,
+offset=0
+%}
+{% dnd_row %}
+{% dnd_module path="../../modules/appointment-scheduler.module" %}
+  {% module_attribute "title" %}Schedule an Appointment{% end_module_attribute %}
+  {% module_attribute "description" %}Select your preferred date and time for a consultation{% end_module_attribute %}
+{% end_dnd_module %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}
+
 {# Contact Section #}
 {% dnd_section
 background_color={ "color": "#0b6b5a" }
