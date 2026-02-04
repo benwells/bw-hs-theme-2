@@ -25,12 +25,11 @@ export default defineConfig({
         'hero-banner': resolve(__dirname, 'src/components/HeroBanner.svelte'),
         'appointment-scheduler': resolve(__dirname, 'src/components/AppointmentScheduler.svelte'),
       },
-      formats: ['es'], // ESM format for HubSpot
+      formats: ['es'],
       fileName: (format, entryName) => `${entryName}.js`
     },
     rollupOptions: {
       output: {
-        // Don't hash filenames - HubSpot needs predictable paths
         entryFileNames: '[name].js',
         chunkFileNames: 'chunks/[name].js',
         assetFileNames: 'assets/[name].[ext]'

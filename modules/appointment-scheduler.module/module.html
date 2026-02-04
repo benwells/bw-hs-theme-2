@@ -1,15 +1,27 @@
-<script type="module" src="{{ get_asset_url('../../js/dist/appointment-scheduler.js') }}"></script>
-
 <div class="appointment-scheduler-wrapper">
   <appointment-scheduler 
     title="{{ module.title }}"
     description="{{ module.description }}"
-  ></appointment-scheduler>
+  >
+    <div style="padding: 40px; text-align: center; color: #666;">
+      Loading appointment scheduler...
+    </div>
+  </appointment-scheduler>
 </div>
+
+<!-- Use type="module" with crossorigin attribute for CORS -->
+<script type="module" crossorigin src="{{ get_asset_url('../../js/dist/appointment-scheduler.js') }}"></script>
+<script type="module" crossorigin src="{{ get_asset_url('../../js/dist/chunks/custom-element.js') }}"></script>
 
 <style>
   .appointment-scheduler-wrapper {
     padding: 60px 20px;
     background: #f8f9fa;
+    min-height: 400px;
+  }
+  
+  appointment-scheduler {
+    display: block;
+    min-height: 300px;
   }
 </style>
