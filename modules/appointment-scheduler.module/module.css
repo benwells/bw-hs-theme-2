@@ -1,0 +1,12 @@
+/* Appointment Scheduler Module Styles */
+.appointment-scheduler-wrapper {
+  padding: 60px 20px;
+  background: #f8f9fa;
+  min-height: 200px;
+}
+
+/* Ensure the custom element displays */
+appointment-scheduler {
+  display: block;
+  width: 100%;
+}
